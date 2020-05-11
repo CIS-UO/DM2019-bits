@@ -223,7 +223,7 @@ class Test_Extract(unittest.TestCase):
 
     def test_extract_low(self):
         """Extract low 3 bits"""
-        low_bits = BitField(0,3)
+        low_bits = BitField(0,2)
         self.assertEqual(low_bits.extract(0b10101010101), 0b101)
 
     def test_middle_bits(self):
@@ -366,7 +366,7 @@ def sign_extend(field: int, width: int) -> int:
         return field
 ```
 
-We'd better test it.  We'll add ```sign_extension``` to the imported 
+We'd better test it.  We'll add ```sign_extend``` to the imported 
 identifiers in ```test_bitfields.py```, and then add: 
 
 ```python
