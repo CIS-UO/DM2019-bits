@@ -300,7 +300,7 @@ class Test_Insert(unittest.TestCase):
 
     def test_insert_low(self):
         """Inserting a few bits in the lowest part of the word. """
-        low_bits = BitField(0,4)
+        low_bits = BitField(0,3)
         self.assertEqual(low_bits.insert(15,0), 15)  # All the bits to 1
         # Slip it in without disturbing higher bits
         self.assertEqual(low_bits.insert(0b1010, 0b1111_0000), 0b1111_1010)
